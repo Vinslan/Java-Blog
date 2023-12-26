@@ -15,7 +15,7 @@
     <div th:each="element : ${post}" class="alert alert-info mt-2">
         <h1 th:text="${element.title}" />
         <p th:text="${element.full_text}" />
-        <p><b>Просмотрты: </b><span th:text="${element.views}"/></p>
+        <p><b>Views: </b><span th:text="${element.views}"/></p>
         <a th:href="'/blog/' + ${element.id} + '/edit'" class ="btn btn-warning">Edit</a><br><br>
         <form th:action="'/blog/' + ${element.id} + '/remove'" method="post">
             <button type ="submit" class ="btn btn-warning">Delete</button>
